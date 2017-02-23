@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title></title>
+<style>
+.grid {
+padding: 1px;
+margin: 0 auto;
+}
+
+.grid--item {
+position: relative;
+margin-top: -90px;
+margin-right: 5px;
+margin-left: 5px;
+width: calc(33.33% - 10px);
+float: left;
+transition: all 0.5s;
+overflow: hidden;
+-webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+-webkit-shape-outside: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.grid--item:before {
+display: block;
+padding-top: 120%;
+content: '';
+}
+.grid--item:nth-child(1), .grid--item:nth-child(2) {
+margin-top: 0;
+}
+.grid--item:nth-child(7n - 1), .grid--item:nth-child(1) {
+margin-left: 165px;
+}
+
+.img {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+background-position: center center;
+background-size: cover;
+overflow: hidden;
+-webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+</style>
+</head>
+<body>
+<div class='grid'>
+
+<div class='grid--item'>
+<div class='img' style='background-image: url(https://storage.googleapis.com/risemedialibrary-960b72df-9af7-476b-8a47-b67ded4c779d/Own%20Designs/hannahsuarezart3.jpg);'></div>
+
+</div>
+<div class='grid--item'>
+<div class='img' style='background-image: url(https://storage.googleapis.com/risemedialibrary-960b72df-9af7-476b-8a47-b67ded4c779d/Own%20Designs/hannahsuarezart6.jpg);'></div>
+</div>
+</div>
+
+</body>
+</html>
